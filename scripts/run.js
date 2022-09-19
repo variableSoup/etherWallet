@@ -10,6 +10,12 @@ const main = async () => {
     const tx = await walletContract.send('0x1aaa529FD9D6f14bC2E81BED5962D68C1B2C44f1');
     tx.wait();
     console.log(tx);
+
+    const withdrawing = await walletContract.withdraw()
+    withdrawing.wait();
+    console.log(withdrawing)
+
+    
 }
 
 const runMain = async () => {
